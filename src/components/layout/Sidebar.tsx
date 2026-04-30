@@ -86,7 +86,7 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
                 </ListItemIcon>
                 <ListItemText
                   primary={item.title}
-                  slotProps={{ primary: { fontWeight: isActive ? 600 : 400 } }}
+                  slotProps={{ primary: { sx: { fontWeight: isActive ? 600 : 400 } } }}
                 />
               </ListItemButton>
             </ListItem>

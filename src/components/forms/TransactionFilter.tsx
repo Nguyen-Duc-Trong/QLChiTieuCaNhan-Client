@@ -54,12 +54,14 @@ export default function TransactionFilterComponent({ filter, onFilterChange }: T
         placeholder="Tim kiem..."
         value={filter.search || ''}
         onChange={(e) => handleChange('search', e.target.value)}
-        InputProps={{
-          startAdornment: (
-            <InputAdornment position="start">
-              <SearchIcon color="action" />
-            </InputAdornment>
-          ),
+        slotProps={{
+          input: {
+            startAdornment: (
+              <InputAdornment position="start">
+                <SearchIcon color="action" />
+              </InputAdornment>
+            ),
+          },
         }}
         sx={{ minWidth: 200 }}
       />

@@ -70,8 +70,10 @@ export default function RecentTransactions({ transactions }: RecentTransactionsP
               />
               <Typography
                 variant="body1"
-                fontWeight={600}
-                color={transaction.type === 'INCOME' ? 'success.main' : 'error.main'}
+                sx={{
+                  fontWeight: 600,
+                  color: transaction.type === 'INCOME' ? 'success.main' : 'error.main',
+                }}
               >
                 {transaction.type === 'INCOME' ? '+' : '-'}
                 {formatCurrency(transaction.amount)}

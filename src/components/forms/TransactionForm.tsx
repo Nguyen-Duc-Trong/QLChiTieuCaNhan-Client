@@ -21,7 +21,7 @@ import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import dayjs from 'dayjs';
 import { transactionSchema, type TransactionFormData } from '../../schemas/transaction';
-import type { Transaction, Category, TransactionType } from '../../types';
+import type { Transaction, Category } from '../../types';
 import { mockCategories } from '../../data/mockData';
 
 interface TransactionFormProps {
@@ -147,8 +147,10 @@ export default function TransactionForm({ open, onClose, onSubmit, transaction }
                   fullWidth
                   error={Boolean(errors.amount)}
                   helperText={errors.amount?.message}
-                  InputProps={{
-                    endAdornment: <InputAdornment position="end">VND</InputAdornment>,
+                  slotProps={{
+                    input: {
+                      endAdornment: <InputAdornment position="end">VND</InputAdornment>,
+                    },
                   }}
                   onChange={(e) => field.onChange(Number(e.target.value))}
                 />

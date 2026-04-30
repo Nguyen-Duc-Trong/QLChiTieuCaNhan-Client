@@ -80,7 +80,7 @@ export default function CategoryList({
                 />
                 <ListItemText
                   primary={category.name}
-                  primaryTypographyProps={{ fontWeight: 500 }}
+                  slotProps={{ primary: { sx: { fontWeight: 500 } } }}
                 />
               </ListItem>
             ))

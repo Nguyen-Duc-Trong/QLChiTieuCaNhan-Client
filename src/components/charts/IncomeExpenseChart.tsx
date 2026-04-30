@@ -39,7 +39,7 @@ export default function IncomeExpenseChart({ data }: IncomeExpenseChartProps) {
                 tick={{ fill: '#757575' }}
               />
               <Tooltip
-                formatter={(value: number) => formatCurrency(value)}
+                formatter={(value) => formatCurrency(Number(value ?? 0))}
                 contentStyle={{
                   backgroundColor: '#fff',
                   border: '1px solid #e0e0e0',
