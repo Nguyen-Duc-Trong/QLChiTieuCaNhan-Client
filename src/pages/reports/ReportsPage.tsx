@@ -7,7 +7,7 @@ import { mockMonthlySummary, mockCategorySummary } from '../../data/mockData';
 export default function ReportsPage() {
   return (
     <Box>
-      <Typography variant="h4" fontWeight={700} gutterBottom>
+      <Typography variant="h4" sx={{ fontWeight: 700 }} gutterBottom>
         Bao cao
       </Typography>
       <Typography color="text.secondary" sx={{ mb: 3 }}>

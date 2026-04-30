@@ -61,7 +61,7 @@ export default function CategoriesPage() {
     <Box>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
         <Box>
-          <Typography variant="h4" fontWeight={700} gutterBottom>
+          <Typography variant="h4" sx={{ fontWeight: 700 }} gutterBottom>
             Danh muc
           </Typography>
           <Typography color="text.secondary">

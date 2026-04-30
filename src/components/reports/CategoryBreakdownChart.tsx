@@ -12,14 +12,14 @@ export default function CategoryBreakdownChart({ data }: CategoryBreakdownChartP
   return (
     <Card sx={{ height: '100%' }}>
       <CardContent>
-        <Typography variant="h6" fontWeight={600} gutterBottom>
+        <Typography variant="h6" sx={{ fontWeight: 600 }} gutterBottom>
           Chi tieu theo danh muc
         </Typography>
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
           {data.map((item) => (
             <Box key={item.categoryId}>
               <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 0.5 }}>
-                <Typography variant="body2" fontWeight={500}>
+                <Typography variant="body2" sx={{ fontWeight: 500 }}>
                   {item.categoryName}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">

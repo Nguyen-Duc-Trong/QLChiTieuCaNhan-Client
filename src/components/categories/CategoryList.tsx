@@ -34,7 +34,7 @@ export default function CategoryList({
     <Card>
       <CardContent>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 2 }}>
-          <Typography variant="h6" fontWeight={600}>
+          <Typography variant="h6" sx={{ fontWeight: 600 }}>
             {title}
           </Typography>
           <Chip

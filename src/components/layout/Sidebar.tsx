@@ -55,7 +55,7 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
     <Box sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
       <Toolbar sx={{ px: 2 }}>
         <AccountBalanceWalletIcon sx={{ mr: 1, color: 'primary.main' }} />
-        <Typography variant="h6" fontWeight={700} color="primary.main">
+        <Typography variant="h6" sx={{ fontWeight: 700 }} color="primary.main">
           QL Chi Tieu
         </Typography>
       </Toolbar>

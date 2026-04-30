@@ -25,7 +25,7 @@ export default function RecentTransactions({ transactions }: RecentTransactionsP
     <Card>
       <CardContent>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
-          <Typography variant="h6" fontWeight={600}>
+          <Typography variant="h6" sx={{ fontWeight: 600 }}>
             Giao dich gan day
           </Typography>
           <Button
@@ -50,7 +50,7 @@ export default function RecentTransactions({ transactions }: RecentTransactionsP
               <ListItemText
                 primary={
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                    <Typography variant="body1" fontWeight={500}>
+                    <Typography variant="body1" sx={{ fontWeight: 500 }}>
                       {transaction.category?.name || 'Khong co danh muc'}
                     </Typography>
                     <Chip

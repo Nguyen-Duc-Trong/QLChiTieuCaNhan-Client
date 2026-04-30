@@ -24,7 +24,7 @@ export default function MonthlySummaryTable({ data }: MonthlySummaryTableProps) 
   return (
     <Card>
       <CardContent>
-        <Typography variant="h6" fontWeight={600} gutterBottom>
+        <Typography variant="h6" sx={{ fontWeight: 600 }} gutterBottom>
           Tong hop theo thang
         </Typography>
         <TableContainer>

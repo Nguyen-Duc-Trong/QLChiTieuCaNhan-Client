@@ -42,7 +42,7 @@ export default function SummaryCard({
             <Typography variant="body2" color="text.secondary" gutterBottom>
               {title}
             </Typography>
-            <Typography variant="h5" fontWeight={700}>
+            <Typography variant="h5" sx={{ fontWeight: 700 }}>
               {value}
             </Typography>
           </Box>

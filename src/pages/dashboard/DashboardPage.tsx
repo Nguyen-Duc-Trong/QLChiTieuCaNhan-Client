@@ -14,7 +14,7 @@ export default function DashboardPage() {
 
   return (
     <Box>
-      <Typography variant="h4" fontWeight={700} gutterBottom>
+      <Typography variant="h4" sx={{ fontWeight: 700 }} gutterBottom>
         Dashboard
       </Typography>
       <Typography color="text.secondary" sx={{ mb: 3 }}>

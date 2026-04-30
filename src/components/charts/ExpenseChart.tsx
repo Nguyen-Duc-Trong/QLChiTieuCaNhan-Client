@@ -17,7 +17,7 @@ export default function ExpenseChart({ data }: ExpenseChartProps) {
   return (
     <Card sx={{ height: '100%' }}>
       <CardContent>
-        <Typography variant="h6" fontWeight={600} gutterBottom>
+        <Typography variant="h6" sx={{ fontWeight: 600 }} gutterBottom>
           Chi tieu theo danh muc
         </Typography>
         <Box sx={{ width: '100%', height: 300 }}>
