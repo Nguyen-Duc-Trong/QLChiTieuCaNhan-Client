@@ -2,11 +2,11 @@ import { z } from 'zod';
 
 export const transactionSchema = z.object({
   amount: z
-    .number({ required_error: 'Vui long nhap so tien' })
+    .number({ error: 'Vui long nhap so tien' })
     .positive('So tien phai lon hon 0'),
-  type: z.enum(['INCOME', 'EXPENSE'], { required_error: 'Vui long chon loai giao dich' }),
-  categoryId: z.string({ required_error: 'Vui long chon danh muc' }).min(1, 'Vui long chon danh muc'),
-  date: z.string({ required_error: 'Vui long chon ngay' }).min(1, 'Vui long chon ngay'),
+  type: z.enum(['INCOME', 'EXPENSE'] as const, { error: 'Vui long chon loai giao dich' }),
+  categoryId: z.string({ error: 'Vui long chon danh muc' }).min(1, 'Vui long chon danh muc'),
+  date: z.string({ error: 'Vui long chon ngay' }).min(1, 'Vui long chon ngay'),
   note: z.string().optional(),
 });
 
