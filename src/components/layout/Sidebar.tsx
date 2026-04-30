@@ -84,9 +84,9 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
                 >
                   {item.icon}
                 </ListItemIcon>
-                <ListItemText 
-                  primary={item.title} 
-                  primaryTypographyProps={{ fontWeight: isActive ? 600 : 400 }}
+                <ListItemText
+                  primary={item.title}
+                  slotProps={{ primary: { fontWeight: isActive ? 600 : 400 } }}
                 />
               </ListItemButton>
             </ListItem>

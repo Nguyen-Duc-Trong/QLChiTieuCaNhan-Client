@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { DataGrid, GridColDef, GridActionsCellItem } from '@mui/x-data-grid';
+import { DataGrid, type GridColDef, GridActionsCellItem } from '@mui/x-data-grid';
 import { Chip, Box, Typography } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -51,8 +51,7 @@ export default function TransactionTable({
         width: 150,
         renderCell: (params) => (
           <Typography
-            fontWeight={600}
-            color={params.row.type === 'INCOME' ? 'success.main' : 'error.main'}
+            sx={{ fontWeight: 600, color: params.row.type === 'INCOME' ? 'success.main' : 'error.main' }}
           >
             {params.row.type === 'INCOME' ? '+' : '-'}
             {formatCurrency(params.value)}
@@ -83,10 +82,9 @@ export default function TransactionTable({
             color="primary"
           />,
           <GridActionsCellItem
-            icon={<DeleteIcon />}
+            icon={<DeleteIcon sx={{ color: 'error.main' }} />}
             label="Xoa"
             onClick={() => onDelete(params.row)}
-            color="error"
           />,
         ],
       },

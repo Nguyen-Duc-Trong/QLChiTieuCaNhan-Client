@@ -84,9 +84,7 @@ export default function Header({ onMenuClick }: HeaderProps) {
           onClose={handleMenuClose}
           anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
           transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-          PaperProps={{
-            sx: { mt: 1, minWidth: 180 },
-          }}
+          slotProps={{ paper: { sx: { mt: 1, minWidth: 180 } } }}
         >
           <MenuItem onClick={handleMenuClose}>
             <SettingsIcon sx={{ mr: 1.5, fontSize: 20 }} />
